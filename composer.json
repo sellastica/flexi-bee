@@ -1,0 +1,21 @@
+{
+	"name": "sellastica/flexi-bee",
+	"homepage": "https://github.com/sellastica/flexi-bee",
+	"license": "proprietary",
+	"authors": [
+		{
+			"name": "Tomáš Krejčí",
+			"homepage": "http://www.sellastica.com"
+		}
+	],
+	"require": {
+		"php": ">=7.1"
+	},
+	"require-dev": {
+	},
+	"autoload": {
+		"psr-4": {
+			"Sellastica\\FlexiBee\\": "src/"
+		}
+	}
+}

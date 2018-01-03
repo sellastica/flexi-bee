@@ -41,7 +41,7 @@ abstract class AbstractDownloadDataHandler extends \Sellastica\Connector\Model\A
 	 * @param \stdClass $data
 	 * @return \stdClass
 	 */
-	protected function convertData(\stdClass $data): \stdClass
+	protected function convertAllValues(\stdClass $data): \stdClass
 	{
 		$convertedData = new \stdClass();
 		foreach ($data as $key => $value) {

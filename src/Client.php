@@ -95,10 +95,13 @@ class Client
 		$this->lastResponse = $this->lastResponseRaw = curl_exec($ch);
 		$this->lastStatusCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 		$errno = curl_errno($ch);
+		$error = curl_error($ch);
 		curl_close($ch);
 
 		if ($errno) {
-			throw new \Sellastica\Connector\Exception\InvalidResponseException('cURL responsed with error code ' . $errno);
+			throw new \Sellastica\Connector\Exception\InvalidResponseException(
+				sprintf('cURL responsed with error code %s: %s', $errno, $error)
+			);
 		} elseif ($this->lastStatusCode === 401) {
 			throw new \Sellastica\Connector\Exception\InvalidCredentialsException('Invalid credentials', 401);
 		} else {

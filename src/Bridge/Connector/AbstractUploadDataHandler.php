@@ -4,7 +4,7 @@ namespace Sellastica\FlexiBee\Bridge\Connector;
 use Nette\Utils\Strings;
 use Sellastica\Connector\Model\IUploadDataHandler;
 
-abstract class AbstractUploadDataHandler extends \Sellastica\Connector\Model\AbstractUploadDataHandler implements IUploadDataHandler
+abstract class AbstractUploadDataHandler implements IUploadDataHandler
 {
 	/**
 	 * @param string $code
